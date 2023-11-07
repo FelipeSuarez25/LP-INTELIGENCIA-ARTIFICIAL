@@ -1,0 +1,85 @@
+body{
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    color: #fff;
+    background: url(../img/fondo.png), #000000;
+    background: url(../img/fondo.png), -webkit-gradient(linear, right top, left top, from(#83962d), to(#7a3e3e));
+    background: url(../img/fondo.png), linear-gradient(to left, #83962d, #7a3e3e);
+    font-family:sans-serif;
+}
+
+h1{
+  text-align: center;
+  font-size: 32px;
+}
+
+.container-general {
+  max-width: 1000px;
+  border: 1px solid #a7a7a7;
+  border-radius: 15px;
+  min-height: 450px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  justify-items: center;
+  align-items: center;
+  backdrop-filter: blur(1.2px);
+  background-color: rgba(255, 255, 255, 0); 
+}
+
+.container-btn input {
+  display: none;
+}
+
+#imagenMostrada {
+  border-radius: 10px;
+  max-width: 95%;
+  max-height: 400px;
+}
+
+/* Definir la animación para la imagen */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Aplicar la animación a la imagen cuando se carga */
+#imagenMostrada.loaded {
+  animation: fadeIn 1s ease; /* Animación de desvanecimiento durante 1 segundo */
+}
+
+#cargarBoton{
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #83962d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#cargarBoton:hover{
+  background-color: #576321;
+}
+
+#cargarBoton:focus{
+  outline: none;
+}
+
+/* Animación de clic */
+#cargarBoton.clicked {
+  transform: scale(1.1); 
+}
+
+@media screen and (max-width: 768px) {
+  .container-general {
+    grid-template-columns: 100%; 
+  }
+}
