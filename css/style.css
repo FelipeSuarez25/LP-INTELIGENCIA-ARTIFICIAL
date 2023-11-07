@@ -81,5 +81,11 @@ h1{
 @media screen and (max-width: 768px) {
   .container-general {
     grid-template-columns: 100%; 
+    margin: 10px;
+  }
+
+  .container-img{
+    display: flex;
+    justify-content: center;
   }
 }
