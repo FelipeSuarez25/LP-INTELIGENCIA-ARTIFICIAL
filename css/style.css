@@ -1,8 +1,6 @@
 body {
   background-size: cover;
   background-position: center;
-  position: relative;
-  width: 100%;
   color: #fff;
   background: url(../img/fondo.png), #000000;
   background: url(../img/fondo.png),
