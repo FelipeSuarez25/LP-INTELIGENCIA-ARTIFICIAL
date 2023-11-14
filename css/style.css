@@ -1,21 +1,22 @@
-body{
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    width: 100%;
-    color: #fff;
-    background: url(../img/fondo.png), #000000;
-    background: url(../img/fondo.png), -webkit-gradient(linear, right top, left top, from(#83962d), to(#7a3e3e));
-    background: url(../img/fondo.png), linear-gradient(to left, #83962d, #7a3e3e);
-    font-family:sans-serif;
+body {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 100%;
+  color: #fff;
+  background: url(../img/fondo.png), #000000;
+  background: url(../img/fondo.png),
+    -webkit-gradient(linear, right top, left top, from(#83962d), to(#7a3e3e));
+  background: url(../img/fondo.png), linear-gradient(to left, #83962d, #7a3e3e);
+  font-family: sans-serif;
 }
 
-h1{
+h1 {
   text-align: center;
   font-size: 32px;
 }
 
-.container-general {
+form {
   max-width: 1000px;
   border: 1px solid #a7a7a7;
   border-radius: 15px;
@@ -26,7 +27,7 @@ h1{
   justify-items: center;
   align-items: center;
   backdrop-filter: blur(1.2px);
-  background-color: rgba(255, 255, 255, 0); 
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .container-btn input {
@@ -49,12 +50,20 @@ h1{
   }
 }
 
-/* Aplicar la animación a la imagen cuando se carga */
 #imagenMostrada.loaded {
-  animation: fadeIn 1s ease; /* Animación de desvanecimiento durante 1 segundo */
+  animation: fadeIn 1s ease;
+  width: 400px;
+  height: 300px;
 }
 
-#cargarBoton{
+.container-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#cargarBoton,
+#enviarBoton {
   display: inline-block;
   padding: 10px 20px;
   background-color: #83962d;
@@ -65,27 +74,70 @@ h1{
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-#cargarBoton:hover{
+#cargarBoton:hover {
   background-color: #576321;
 }
 
-#cargarBoton:focus{
+#cargarBoton:focus {
   outline: none;
 }
 
 /* Animación de clic */
 #cargarBoton.clicked {
-  transform: scale(1.1); 
+  transform: scale(1.1);
+}
+
+.container-img {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media screen and (max-width: 768px) {
   .container-general {
-    grid-template-columns: 100%; 
+    grid-template-columns: 100%;
     margin: 10px;
   }
 
-  .container-img{
-    display: flex;
-    justify-content: center;
+  form{
+    grid-template-columns: 100%;
+    margin: 10px;
   }
+}
+
+.typed-cursor {
+  opacity: 1;
+  animation: blink 0.7s infinite;
+}
+
+.title{
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#tituloTyped {
+  display: inline-block; /* Ajusta esto según sea necesario */
+}
+
+#cursorTyped {
+  display: inline-block; /* Ajusta esto según sea necesario */
+}
+
+@keyframes blink {
+  0%, 100% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0;
+  }
+}
+
+.prediction {
+  color: green;  /* Cambia el color a tu elección */
+}
+
+.accuracy {
+  color: blue;  /* Cambia el color a tu elección */
 }

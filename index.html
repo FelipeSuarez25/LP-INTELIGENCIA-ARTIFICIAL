@@ -7,18 +7,27 @@
   <title>LP IA</title>
 </head>
 <body>
-
-  <h1>Reconocimiento por Imagen</h1>
-  <div class="container-general">
-    <div class="container-btn">
-      <input type="file" id="imagenInput" accept="image/*">
-      <button id="cargarBoton">Cargar Imagen</button>
-    </div>
-    <div class="container-img">
-      <img id="imagenMostrada" src="img/upload-image.jpg" alt="Imagen seleccionada">
-    </div>
-  </div>
   
+  <div class="title">
+    <h1 id="tituloTyped">Reconocimiento <span class="typed" id="cursorTyped"></span></h1>
+  </div>
+
+  <div class="container-general">
+    <form id="miFormulario" enctype="multipart/form-data" onsubmit="event.preventDefault(); enviarImagen();">
+      <div class="container-btn">
+          <input type="file" id="imagenInput" name="imagen" accept="image/*">
+          <button type="button" id="cargarBoton" >Cargar Imagen</button>
+          <button type="submit" id="enviarBoton" onclick="enviarImagen()">Enviar la Imagen</button>
+      </div>
+      <div class="container-img">
+          <img id="imagenMostrada" src="img/upload-image.jpg" alt="Imagen seleccionada">
+          <div id="mensajeResultado"></div>
+      </div>
+    </form>
+
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
