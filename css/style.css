@@ -116,11 +116,12 @@ form {
 }
 
 #tituloTyped {
-  display: inline-block; /* Ajusta esto según sea necesario */
+  display: inline-block; 
+  height: 75px;
 }
 
 #cursorTyped {
-  display: inline-block; /* Ajusta esto según sea necesario */
+  display: inline-block;
 }
 
 @keyframes blink {
